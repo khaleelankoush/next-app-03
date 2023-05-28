@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 
 import PromptCard from "./PromptCard";
 
-const PromptCardList = async ({ data, handleTagClick }) => {
+const PromptCardList = ({ data, handleTagClick }) => {
   return (
     <div className="mt-16 prompt_layout">
-      {await data.map((post) => (
+      {data.map((post) => (
         <PromptCard
           key={post._id}
           post={post}
